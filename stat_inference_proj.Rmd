@@ -1,0 +1,73 @@
+---
+title: "Statistcal Inference"
+author: "Tom Garshol"
+date: "3/12/2019"
+output: html_document
+---
+##Overview##
+This course project is for the Coursera class on statistical inference.
+
+It investigates The Exponential Distribution in R and aplies The Central Limit Theorem to a thousand mean simulations.
+
+The project illustrates through simulation the properties of the distribution of the mean of 40 exponentials by the means of:
+
+A simulation exercise and a basic inferential data analysis.
+
+###First, seed and variables are set.###
+
+```{r }
+set.seed(2019)
+
+lambda <- 0.2
+#n = 40 exponentials.
+n <- 40
+#Simu??s = 1000
+runs <- 1000
+```
+
+###We do the simulations and make a plot.###
+
+```{r }
+plot(rexp(1000,lambda),
+     main="Exponential distribution: lambda = 0.2, records = 1,000")
+```
+
+###Afterwards, we do a sample of MEAN compared to theoretical MEAN ###
+
+```{r }
+mns <- NULL
+for (i in 1 : runs) mns <- c(mns, mean(rexp(n,lambda)))
+#mean of exponential distribution is 1/lambda
+1/lambda
+mean(mns)
+```
+###We create a graph for the mean distribution.
+
+```{r }
+hist(mns, main="Mean Distribution", breaks=50)
+abline(v=mean(mns),col="red")
+```
+
+###The last part is to show a sample variance compared to a theoretical variance.###
+
+###Here is for the theoretical standard deviation###
+
+```{r }
+(1/lambda)/sqrt(n)
+sd(mns)
+```
+###The variance ###
+
+```{r }
+((1/lambda)/sqrt(n))^2
+sd(mns)^2
+```
+It is interesting to see the similarities in the two sets of values. They are very alike.
+
+###Is the distribution normal ?###
+```{r }
+hist(mns, prob=TRUE, main="Mean Distribution", breaks=50)
+lines(density(mns), lwd=3, col="red")
+```
+
+The simulation that we have created has a strong bias for normality. More samples will show this even stronger. By changing the variable "runs" to 100000 samples, the curve will be much more normalized. 
