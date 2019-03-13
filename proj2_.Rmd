@@ -64,5 +64,5 @@ doseTot
 Comparing all the doses reveals that their p-values are very low and the confidence intervals do not contain zero, so we can conclude that the dose does affect the tooth length.
 
 ###Conclusion
-The tooth growth data confirmes that an increase in the dose of the supplement increases the tooth growth. Whether the type of supplement, vitamin C or orange juice, affects the tooth is difficult to say.
+The tooth growth data confirmes that an increase in the dose of the supplement increases the tooth growth. Whether the type of supplement, vitamin C or orange juice, affects the tooth can not be discussed here.
 
