@@ -61,7 +61,8 @@ d1020 <- data.frame("p-value"=c(d1020_t1$p.value, d1020_t2$p.value),
 doseTot <- rbind(d510,d520,d1020)
 doseTot
 ```
-The result of comparing all the doses is that their p-values are very low and the confidence intervals do not contain zero, so we can deny the hypothesis and conclude that the dose does affect the tooth length.
+Comparing all the doses reveals that their p-values are very low and the confidence intervals do not contain zero, so we can conclude that the dose does affect the tooth length.
 
 ###Conclusion
-In conclusion I have analysed the tooth growth data and confirmed that an increase if the dose of the supplement increases the tooth growth. It is inconclusive whether the type of supplement, vitamin C or orange juice, affects the tooth  The assumptions needed for these coclusions is that the guinea pigs were randonmly selected from a population of guinea pigs.
+The tooth growth data confirmes that an increase in the dose of the supplement increases the tooth growth. Whether the type of supplement, vitamin C or orange juice, affects the tooth is difficult to say.
+
